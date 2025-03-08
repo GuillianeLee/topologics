@@ -56,8 +56,7 @@ export default function Home() {
             <li
               key={item}
               className={`cursor-pointer px-3 py-1 rounded-md transition ${
-                activeSection === item ? "bg-[#205781] text-white" : "hover:text-[#205781]"
-              }`}
+                activeSection === item ? "bg-[#205781] text-white" : "hover:text-[#205781]"}`}
               onClick={() => handleNavClick(item.toLowerCase(), item)}> {item}
             </li>
           ))}
@@ -78,8 +77,7 @@ export default function Home() {
           <button
             key={item}
             className={`text-lg px-4 py-2 rounded-md transition ${
-              activeSection === item ? "bg-[#205781] text-white" : "hover:text-[#205781]"
-            }`}
+              activeSection === item ? "bg-[#205781] text-white" : "hover:text-[#205781]"}`}
             onClick={() => handleNavClick(item.toLowerCase(), item)}>{item}
           </button>
         ))}
@@ -125,7 +123,7 @@ export default function Home() {
             height={500}
             className="w-full max-w-sm md:max-w-md"
           />
-          {/* Info Card on Top of Image */}
+          {/* Info Card*/}
           <div className="absolute bottom-5 md:bottom-10 right-0 translate-x-[150px] bg-white p-4 md:p-6 rounded-lg shadow-lg w-60 md:w-80 text-center">
             <p className="text-gray-600 font-lato">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
@@ -186,6 +184,7 @@ export default function Home() {
         </div>
       </section>
       
+
       {/* Statistics */}
       <section className="px-8 md:px-16 py-10 bg-[#4F959D] flex justify-between text-center">
         <div>
@@ -206,6 +205,7 @@ export default function Home() {
         </div>
       </section>
 
+
      {/* Services Section */}
      <section id="services" ref={ref} className="px-8 md:px-16 py-16 bg-white text-center">
         <h2 className="text-3xl font-bold">Our Services</h2>
@@ -221,8 +221,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 50 }} 
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} 
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="p-6 bg-white rounded-lg shadow-md flex items-start space-x-4"
-            >
+              className="p-6 bg-white rounded-lg shadow-md flex items-start space-x-4">
               <div className="bg-green-100 p-4 rounded-full">
                 <service.icon size={40} className="text-[#205781]" />
               </div>
@@ -261,8 +260,9 @@ export default function Home() {
         </div>
         <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
           <Image src="/assets/workflow.png" alt="Workflow" width={500} height={400} />
-        </div>
-      </section>
+      </div>
+    </section>
+
 
       {/* Contact Section */}
       <section id="contact" className="px-8 md:px-16 py-16 text-center bg-[#4F959D]">
@@ -272,7 +272,8 @@ export default function Home() {
         <motion.button 
           whileHover={{ scale: 1.05 }} 
           whileTap={{ scale: 0.95 }}
-          className="mt-4 px-6 py-2 bg-[#205781] text-white rounded-lg"> Contact Us </motion.button>
+          className="mt-4 px-6 py-2 bg-[#205781] text-white rounded-lg"> Contact Us 
+        </motion.button>
       </section>
 
       {/* Footer */}
