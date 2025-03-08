@@ -267,7 +267,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="px-8 md:px-16 py-16 text-center bg-[#4F959D]">
         <p className="text-[#205781] font-medium">The Solution</p>
-        <h2 className="text-white text-4xl font-bold mt-2 uppercase">Let's innovate together.</h2>
+        <h2 className="text-white text-4xl font-bold mt-2 uppercase">Let us innovate together.</h2>
         <p className="text-gray-700 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <motion.button 
           whileHover={{ scale: 1.05 }} 
