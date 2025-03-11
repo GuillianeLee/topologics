@@ -16,7 +16,6 @@ export default function Home() {
         { id: "home", name: "Home" },
         { id: "about", name: "About" },
         { id: "services", name: "Services" },
-        { id: "process", name: "Process" },
         { id: "contact", name: "Contact" }
       ];
       sections.forEach(({ id, name }) => {
@@ -52,7 +51,7 @@ export default function Home() {
         </button>
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8 text-gray-700">
-          {["Home", "About", "Services", "Process"].map((item) => (
+          {["Home", "About", "Services"].map((item) => (
             <li
               key={item}
               className={`cursor-pointer px-3 py-1 rounded-md transition ${
@@ -124,7 +123,7 @@ export default function Home() {
             className="w-full max-w-sm md:max-w-md"
           />
           {/* Info Card*/}
-          <div className="absolute bottom-5 md:bottom-10 right-0 translate-x-[150px] bg-white p-4 md:p-6 rounded-lg shadow-lg w-60 md:w-80 text-center">
+          <div className="relative bottom-5 md:bottom-10 right-0 bg-white p-4 md:p-6 rounded-lg shadow-lg w-60 md:w-80 text-center">
             <p className="text-gray-600 font-lato">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
@@ -136,23 +135,18 @@ export default function Home() {
         <p className="text-gray-600 text-lg"> Beneficiaries within the <span className="text-[#205781] font-semibold"> Philippine Enterprises</span></p>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mt-6 w-full max-w-4xl">
           <div className="flex flex-col items-center">
-            <Briefcase size={40} className="text-[#205781]" />
             <p className="mt-2 text-gray-800">E-commerce</p>
           </div>
           <div className="flex flex-col items-center">
-            <Banknote size={40} className="text-[#205781]" />
-            <p className="mt-2 text-gray-800">Financial Institutions</p>
+            <p className="mt-2 text-gray-800">Financial</p>
           </div>
           <div className="flex flex-col items-center">
-            <PhoneCall size={40} className="text-[#205781]" />
             <p className="mt-2 text-gray-800">Telecommunications</p>
           </div>
           <div className="flex flex-col items-center">
-            <Plane size={40} className="text-[#205781]" />
             <p className="mt-2 text-gray-800">Travel</p>
           </div>
           <div className="flex flex-col items-center">
-            <Wrench size={40} className="text-[#205781]" />
             <p className="mt-2 text-gray-800">Service-Based</p>
           </div>
         </div>
@@ -166,7 +160,7 @@ export default function Home() {
         <div className="md:w-1/2">
           <h3 className="text-[#205781] font-medium">Who we are</h3>
           <h2 className="text-3xl font-bold mt-2 font-lato">Expert Online Payment Gateway Solutions: Secure, Efficient, and Reliable.</h2>
-          <p className="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p className="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <ul className="mt-6 space-y-3">
             <li className="flex items-center space-x-3 font-lato">
               <span className="text-[#205781]">✔</span>
@@ -183,48 +177,24 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      
-
-      {/* Statistics */}
-      <section className="px-8 md:px-16 py-10 bg-[#4F959D] flex justify-between text-center">
-        <div>
-          <p className="text-2xl font-bold">No of</p>
-          <p className="text-gray-600">Years Of Experience</p>
-        </div>
-        <div>
-          <p className="text-2xl font-bold">No of</p>
-          <p className="text-gray-600">Total Transactions</p>
-        </div>
-        <div>
-          <p className="text-2xl font-bold">No of</p>
-          <p className="text-gray-600">Active Users</p>
-        </div>
-        <div>
-          <p className="text-2xl font-bold">No of</p>
-          <p className="text-gray-600">Positive Reviews</p>
-        </div>
-      </section>
-
+    
 
      {/* Services Section */}
      <section id="services" ref={ref} className="px-8 md:px-16 py-16 bg-white text-center">
         <h2 className="text-3xl font-bold">Our Services</h2>
         <div className="grid md:grid-cols-2 gap-8 mt-8 font-lato">
           {[ 
-            { icon: ShoppingCart, title: "Shopping Cart Integration", desc: "Seamlessly integrate your shopping cart for a smooth checkout experience." },
-            { icon: RefreshCw, title: "Abandoned Cart Recovery", desc: "Recover lost sales by reminding customers of their abandoned carts." },
-            { icon: TrendingUp, title: "Automated Proration & Upgrades", desc: "Manage subscriptions and billing adjustments seamlessly." },
-            { icon: User, title: "User-friendly Interface", desc: "Intuitive design for effortless navigation and better user experience." }
+            { title: "Shopping Cart Integration", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+            { title: "Abandoned Cart Recovery", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+            { title: "Automated Proration & Upgrades", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+            { title: "User-friendly Interface", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
           ].map((service, index) => (
             <motion.div 
               key={index} 
               initial={{ opacity: 0, y: 50 }} 
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} 
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="p-6 bg-white rounded-lg shadow-md flex items-start space-x-4">
-              <div className="bg-green-100 p-4 rounded-full">
-                <service.icon size={40} className="text-[#205781]" />
-              </div>
+              className="p-6 bg-white border border-[#72D3DF] rounded-lg shadow-md flex items-start space-x-4">
               <div>
                 <h3 className="text-xl font-semibold">{service.title}</h3>
                 <p className="text-gray-600 mt-2">{service.desc}</p>
@@ -233,36 +203,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-
-      {/* Process Workflow Section */}
-      <section id="process" className="px-8 md:px-16 py-16 flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2">
-          <h3 className="text-[#205781] font-medium">How It Works</h3>
-          <h2 className="text-3xl font-bold mt-2">Our Process Workflow</h2>
-          <div className="mt-6 space-y-6">
-            {[
-              { step: "01", title: "Consultation", desc: "Schedule a consultation to discuss your business goals and digital marketing needs." },
-              { step: "02", title: "Strategy Development", desc: "Our team will develop a customized digital marketing strategy tailored to your business." },
-              { step: "03", title: "Implementation", desc: "We will put the strategy into action and launch your campaigns." },
-              { step: "04", title: "Monitoring & Optimization", desc: "We continually monitor and optimize your campaigns to maximize results." },
-              { step: "05", title: "Reporting & Analysis", desc: "We provide regular reports and analysis on campaign performance." },
-            ].map((item) => (
-              <div key={item.step} className="flex items-start space-x-4">
-                <span className="text-[#205781] text-xl font-semibold">{item.step}</span>
-                <div>
-                  <h4 className="text-lg font-semibold">{item.title}</h4>
-                  <p className="text-gray-600">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
-          <Image src="/assets/workflow.png" alt="Workflow" width={500} height={400} />
-      </div>
-    </section>
-
 
       {/* Contact Section */}
       <section id="contact" className="px-8 md:px-16 py-16 text-center bg-[#4F959D]">
@@ -295,7 +235,6 @@ export default function Home() {
             <ul className="space-y-2">
               <li className="cursor-pointer hover:text-[#205781] transition duration-300 ease-in-out">About Us</li>
               <li className="cursor-pointer hover:text-[#205781] transition duration-300 ease-in-out">Services</li>
-              <li className="cursor-pointer hover:text-[#205781] transition duration-300 ease-in-out">Process</li>
             </ul>
           </div>
           <div>
