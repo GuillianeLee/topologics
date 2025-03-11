@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Menu, X, ShoppingCart, RefreshCw, TrendingUp, User, Briefcase, Banknote, PhoneCall, Plane, Wrench, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Menu, X, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("Home");
