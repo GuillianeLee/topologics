@@ -221,8 +221,8 @@ export default function Home() {
               initial={{ opacity: 0, y: 50 }} 
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} 
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="p-6 bg-white rounded-lg shadow-md flex items-start space-x-4">
-              <div className="bg-green-100 p-4 rounded-full">
+              className="p-6 bg-white border border-[#72D3DF] rounded-lg shadow-md flex items-start space-x-4">
+              <div className="bg-[#4F959D] p-4 rounded-full">
                 <service.icon size={40} className="text-[#205781]" />
               </div>
               <div>
@@ -242,11 +242,11 @@ export default function Home() {
           <h2 className="text-3xl font-bold mt-2">Our Process Workflow</h2>
           <div className="mt-6 space-y-6">
             {[
-              { step: "01", title: "Consultation", desc: "Schedule a consultation to discuss your business goals and digital marketing needs." },
-              { step: "02", title: "Strategy Development", desc: "Our team will develop a customized digital marketing strategy tailored to your business." },
-              { step: "03", title: "Implementation", desc: "We will put the strategy into action and launch your campaigns." },
-              { step: "04", title: "Monitoring & Optimization", desc: "We continually monitor and optimize your campaigns to maximize results." },
-              { step: "05", title: "Reporting & Analysis", desc: "We provide regular reports and analysis on campaign performance." },
+              { step: "01", title: "Consultation", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+              { step: "02", title: "Strategy Development", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+              { step: "03", title: "Implementation", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+              { step: "04", title: "Monitoring & Optimization", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+              { step: "05", title: "Reporting & Analysis", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
             ].map((item) => (
               <div key={item.step} className="flex items-start space-x-4">
                 <span className="text-[#205781] text-xl font-semibold">{item.step}</span>
